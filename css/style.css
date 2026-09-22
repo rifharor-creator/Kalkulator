@@ -1,12 +1,12 @@
 :root {
-    --warna-latar: #eef3fb;
-    --warna-utama: #2563eb;
-    --warna-display:#10213a;
+    --warna-latar: #e8d3b3;
+    --warna-utama: #f3e5c8;
+    --warna-display: #10213a;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--warna-latar),#dce8ff);
+    background: linear-gradient(135deg, var(--warna-latar), #f3e4cc);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,23 +32,40 @@ body {
 
 .hasil {
     overflow-wrap: anywhere;
-    font-size: clam(28px, 7vw, 40px);
+    font-size: clamp(28px, 7vw, 40px);
     font-weight: bold;
     line-height: 1.3;
 }
 
+/* SEMUA TOMBOL MENJADI BULAT */
 .tombol {
+    width: 60px;
+    height: 60px;
     min-height: 60px;
-    border-radius: 12px;
-    font-sixe:20px;
+    border-radius: 50% !important;
+    font-size: 20px;
     font-weight: 600;
+    padding: 0;
 
-    /* Animasi */
-    transform:
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    transition:
         transform 0.2s ease,
         background-color 0.2s ease;
 }
 
+/* Tombol = tetap kotak memanjang */
+.tombol[data-aksi="reset"] {
+    width: 100%;
+    height: 60px;
+    border-radius: 12px !important;
+}
+
+/* Efek hover */
 .tombol:hover {
     transform: scale(0.96);
 }
@@ -57,9 +74,29 @@ body {
     transform: scale(0.96);
 }
 
+/* Tombol operator */
 .btn-primary {
     background-color: var(--warna-utama);
     border-color: var(--warna-utama);
+    color: #333;
+}
+
+/* Tombol = hijau tua */
+.btn-success {
+    background-color: #8F666C;
+    border-color: #8F666C;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #8F666C;
+    border-color: #8F666C;
+    color: white;
+}
+
+/* Tampilan hasil tetap kotak */
+.display {
+    border-radius: 16px;
 }
 
 @media (prefers-reduced-motion: reduce) {
