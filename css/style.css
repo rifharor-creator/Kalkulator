@@ -4,6 +4,42 @@
     --warna-display: #10213a;
 }
 
+        /* Teks di atas card */
+        .judul-atas {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .judul-atas h2 {
+            font-weight: bold;
+            color: #6b1313;
+        }
+
+        .judul-atas p {
+            color: #6c757d;
+        }
+
+        /* Warna tombol AC */
+        .btn-pink {
+            background-color: #6b1313;
+            border-color: #6b1313;
+            color: white;
+        }
+
+        .btn-pink:hover {
+            background-color: #6b1313;
+            border-color: #6b1313;
+            color: white;
+        }
+
+        /* Warna tombol operator saat kursor diarahkan */
+        .btn-primary:hover {
+            background-color: #6b1313;
+            border-color: #6b1313;
+            color: white;
+        }
+
+
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--warna-latar), #f3e4cc);
@@ -16,7 +52,7 @@ body {
     border-radius: 24px;
 }
 
-.display {
+.Display {
     padding: 20px;
     border-radius: 16px;
     background-color: var(--warna-display);

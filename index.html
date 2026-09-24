@@ -13,240 +13,182 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        /* Warna tombol AC */
-        .btn-pink {
-            background-color: #6b1313;
-            border-color: #6b1313;
-            color: white;
-        }
 
-        .btn-pink:hover {
-            background-color: #6b1313;
-            border-color: #6b1313;
-            color: white;
-        }
-    </style>
 </head>
 
-<body class="d-flex align-items-center justify-content-center p-3">
+<body>
 
-    <main class="kalkulator bg-white shadow-lg p-4">
+    <!-- Teks di atas card -->
+    <section class="judul-atas mt-4">
+        <h2>Kalkulator Online Sederhana</h2>
+        <p>
+            Hitung berbagai angka dengan mudah, cepat, dan praktis.
+        </p>
+    </section>
 
-        <header class="mb-4">
-            <h1 class="h4 fw-bold mb-1">Kalkulator</h1>
-            <p class="text-secondary small mb-0">
-                Hitung dengan mudah dan cepat.
-            </p>
-        </header>
+    <!-- Card Kalkulator -->
+    <div class="d-flex align-items-center justify-content-center p-3">
 
-        <!-- Tampilan kalkulator -->
-        <section class="display mb-4" aria-label="Tampilan perhitungan">
+        <main class="kalkulator bg-white shadow-lg p-4">
 
-            <div id="riwayat" class="riwayat"></div>
+            <header class="mb-4 text-center">
+                <h1 class="h4 fw-bold mb-1">Kalkulator</h1>
 
-            <output
-                id="hasil"
-                class="hasil d-block"
-                aria-label="Hasil perhitungan"
-                aria-live="polite">
-                0
-            </output>
+                <p class="text-secondary small mb-0">
+                    Hitung dengan mudah dan cepat.
+                </p>
+            </header>
 
-        </section>
+            <!-- Tampilan kalkulator -->
+            <section class="D~isplay mb-4" aria-label="Tampilan perhitungan">
 
-        <!-- Tombol kalkulator menggunakan grid Bootstrap -->
-        <section aria-label="Tombol kalkulator">
+                <div id="riwayat" class="riwayat"></div>
 
-            <div id="tombol-kalkulator" class="row g-2">
+                <output id="hasil" class="hasil d-block" aria-label="Hasil perhitungan" aria-live="polite">
+                    0
+                </output>
 
-                <div class="col-6">
-                    <button
-                        type="button"
-                        class="btn btn-pink tombol w-100"
-                        data-aksi="reset">
-                        AC
-                    </button>
+            </section>
+
+            <!-- Tombol kalkulator -->
+            <section aria-label="Tombol kalkulator">
+
+                <div id="tombol-kalkulator" class="row g-2">
+
+                    <!-- Baris pertama -->
+                    <div class="col-6">
+                        <button type="button" class="btn btn-pink tombol w-100" data-aksi="reset">
+                            AC
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-aksi="hapus"
+                            aria-label="Hapus satu angka">
+                            ⬅
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary tombol w-100" data-operator="/" aria-label="Bagi">
+                            ➗
+                        </button>
+                    </div>
+
+                    <!-- Baris kedua -->
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="7">
+                            7
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="8">
+                            8
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="9">
+                            9
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary tombol w-100" data-operator="*" aria-label="Kali">
+                            ✖
+                        </button>
+                    </div>
+
+                    <!-- Baris ketiga -->
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="4">
+                            4
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="5">
+                            5
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="6">
+                            6
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary tombol w-100" data-operator="-"
+                            aria-label="Kurang">
+                            ➖
+                        </button>
+                    </div>
+
+                    <!-- Baris keempat -->
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="1">
+                            1
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="2">
+                            2
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="3">
+                            3
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary tombol w-100" data-operator="+"
+                            aria-label="Tambah">
+                            ➕
+                        </button>
+                    </div>
+
+                    <!-- Baris kelima -->
+                    <div class="col-6">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="0">
+                            0
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light tombol w-100" data-angka="."
+                            aria-label="Titik desimal">
+                            ▪
+                        </button>
+                    </div>
+
+                    <div class="col-3">
+                        <button type="button" class="btn btn-success tombol w-100" data-aksi="hitung"
+                            aria-label="Hitung hasil">
+                            =
+                        </button>
+                    </div>
+
                 </div>
 
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-aksi="hapus"
-                        aria-label="Hapus satu angka">
-                        ⬅
-                        
-                    </button>
-                </div>
+            </section>
 
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-primary tombol w-100"
-                        data-operator="/"
-                        aria-label="Bagi">
-                        ➗
-                    </button>
-                </div>
+            <footer class="mt-4 text-center">
+                <small class="text-secondary">
+                    AC: reset . ⬅: hapus satu angka
+                </small>
+            </footer>
 
-                <!-- Baris kedua -->
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="7">
-                        7
-                    </button>
-                </div>
+        </main>
 
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="8">
-                        8
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="9">
-                        9
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-primary tombol w-100"
-                        data-operator="*"
-                        aria-label="Kali">
-                        ✖
-                    </button>
-                </div>
-
-                <!-- Baris ketiga -->
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="4">
-                        4
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="5">
-                        5
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="6">
-                        6
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-primary tombol w-100"
-                        data-operator="-"
-                        aria-label="Kurang">
-                        ➖
-                    </button>
-                </div>
-
-                <!-- Baris keempat -->
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="1">
-                        1
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="2">
-                        2
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="3">
-                        3
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-primary tombol w-100"
-                        data-operator="+"
-                        aria-label="Tambah">
-                        ➕
-                    </button>
-                </div>
-
-                <!-- Baris kelima -->
-                <div class="col-6">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="0">
-                        0
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-light tombol w-100"
-                        data-angka="."
-                        aria-label="Titik desimal">
-                        ▪
-                    </button>
-                </div>
-
-                <div class="col-3">
-                    <button
-                        type="button"
-                        class="btn btn-success tombol w-100"
-                        data-aksi="hitung"
-                        aria-label="Hitung hasil">
-                        =
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <footer class="mt-4 text-center">
-            <small class="text-secondary">
-                AC: reset . ⬅: hapus satu angka
-            </small>
-        </footer>
-
-    </main>
+    </div>
 
     <script src="../projek-kalkulator/js/script.js"></script>
 
 </body>
-</html>
 
+</html>
